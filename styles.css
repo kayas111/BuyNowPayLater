@@ -1,0 +1,108 @@
+.navBar{
+background-color: black;
+}
+
+.nav-item{
+    
+    
+    padding-right: 40px;
+}
+
+.businessName{
+    color: orange;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.nav-value{
+    color: white;
+}
+
+.navbar-nav{
+    padding-top: 14px;
+}
+.navDropdownButtonText{
+    color: yellow;
+}
+
+.footer{
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.footerLabel{
+    font-size: 23px;
+    
+}
+
+form{
+    border-radius: 5px;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+}
+input{
+    width: 100%;
+    border: 0px solid white;
+    
+}
+
+
+.inputHoverEffect1:hover{
+border:3px solid green;
+
+}
+
+.button1{
+    background-color:green;
+    padding:4px;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    
+  }
+
+.formLabel{
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+padding-bottom: 10px;
+
+}
+
+.formContainer{
+    padding: 5px;
+}
+
+.toastAlert1{
+    background-color:green;
+    color: white;
+    padding-top: 30px;
+    
+  height: 12%;
+  font-size: 15px;
+  position:fixed;
+  border-radius: 0px 0px 5px 5px;
+  top:0%;
+  left: 0%;
+  right: 0%;
+  text-align:center;
+  }
+  
+  .toastAlert2{
+    background-color:rgb(226, 0, 0);
+    padding-top: 30px;
+    
+    color: white;
+  height: 12%;
+  font-size: 12px;
+  position:fixed;
+  top:0%;
+  left: 0%;
+  right: 0%;
+  text-align:center;
+  }
