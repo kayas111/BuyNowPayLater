@@ -1,8 +1,4 @@
-function Alert(){
 
-    window.alert('hello humphrey')
-  
-  }
   
   function ToastAlert(alertClass,message,delay){
   
