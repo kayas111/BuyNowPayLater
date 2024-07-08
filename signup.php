@@ -29,7 +29,7 @@
 function ValidateSignUpForm(){
     
     if (document.querySelector('#signUpForm').name.value.trim()===''){
-        ToastAlert("toastAlert2","No name","2000")
+        ToastAlert("toastAlert2","Enter name","2000")
     }else{
         ToastAlert("toastAlert1","Succesful","2000")
     }
