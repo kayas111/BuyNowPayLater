@@ -1,11 +1,11 @@
 
-<div class='footer'>
+<div  class='footer'>
     
 <div class='row'>
 <div class='col-md-3'>
 <div class='footerLabel'>About BNPL</div>
-<div class='footerLabelDesc'>BNPL is a crediting service that alows you get served even when you have no money at te moment. <p></p>
-Feel free toget served and pay back later.
+<div class='footerLabelDesc'>BNPL is a crediting service that alows you get served even when you have no money at the moment. <p></p>
+Feel free to get served and pay back later.
 
 </div>
 </div>
@@ -13,23 +13,23 @@ Feel free toget served and pay back later.
 <div class='col-md-3'>
 <div class='footerLabel'>Location</div>
 <div class='footerLabelDesc'>
-Loated along MakerereWestern gate, next ot Baskon hostel
+Located along Makerere Western gate, next ot Baskon hostel
 </div>
 </div>
 
 <div class='col-md-3'>
 <div class='footerLabel'>Contact</div>
 <div class='footerLabelDesc'>
-Tel: 0703852178 <br>
-Email: buynowpaylater@gmail.com
+<span class="fa fa-phone"></span> Phone: 0703852178 <br>
+<span class="fa fa-envelope"></span> Email: buynowpaylater@gmail.com
 </div>
 </div>
 
 <div class='col-md-3'>
 <div class='footerLabel'>Social media</div>
 <div class='footerLabelDesc'>
-Twitter: @bnpl <br>Facebook: buynowpaylater <br>
-WhatsApp: 0703852178
+<span class="fa fa-twitter"></span> Twitter: @bnpl <br> <span class="fa fa-facebook"></span> Facebook: buynowpaylater <br>
+<span class="fa fa-whatsapp"></span> WhatsApp: 0703852178
 </div>
 </div>
 
