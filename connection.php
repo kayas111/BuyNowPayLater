@@ -10,20 +10,13 @@ die ("connection failed: ".$conn->connect_error);
 
 }else{
 
-//echo ("Successfully connected to database.");
+echo ("Successfully connected to database.");
 
 
 
 
 
 }
-
-
-$name=json_decode($_POST['name'],true);
-
-echo($name);
-
-
 
 
 // $table=mysqli_query($conn,"SELECT * FROM client;");

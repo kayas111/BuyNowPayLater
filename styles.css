@@ -102,9 +102,9 @@ padding-bottom: 10px;
   }
   
   .toastAlert2{
-    background-color:rgb(226, 0, 0);
+    animation:hide 5s forwards;
+    background-color:rgb(255, 0, 0);
     padding-top: 30px;
-    
     color: white;
   height: 12%;
   font-size: 12px;
