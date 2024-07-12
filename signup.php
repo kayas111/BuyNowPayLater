@@ -1,9 +1,43 @@
+<<<<<<< HEAD
 <?php include './header.php'; ?>
-<div class='row'>
-<div class='col-md-4'></div>
-<div style='padding-top:50px;' class='col-md-4'>
+=======
 
-<div class='formContainer' ><form id="signUpForm" action="">
+<?php
+include './header.php';
+  ?>
+
+
+>>>>>>> 1b01caff634f7707ddf455b7161c29fc19f00803
+<div class='row'>
+<div class='col-md-3'></div>
+<div style='padding-top:50px;' class='col-md-6'>
+
+<div class='formContainer' >
+   
+
+<?php
+    if(isset($_SESSION['alert_type'])){
+
+     
+?>
+
+<script>
+console.log('lisa')
+</script>
+  <div class="alert alert-<?= $_SESSION['alert_type']?>">
+
+  <?= $_SESSION['alert_msg']?>
+  </div>
+
+
+
+<?php 
+unset($_SESSION['alert_type']);
+unset($_SESSION['alert_msg']);
+}
+?> 
+
+<form id="signupForm" method = "POST" action="./components/handleFormRequests.php">
 <div class='formLabel'>Sign up</div>
 <div class='formInputLabel'>Full Name</div>
 <input type="text" name="name" class='inputHoverEffect1'><br></br>
@@ -14,15 +48,22 @@
 <div class='formInputLabel'>Password</div>
 <input type="password" name="password" class='inputHoverEffect1'><br></br>
 <div class='formInputLabel'>Confirm password</div>
+<<<<<<< HEAD
 <input type="password" name="password2" class='inputHoverEffect1'><br></br>
 <div class='button1' onclick='ValidateSignUpForm()'>Sign up</div>
+=======
+<input type="text" name="password2" class='inputHoverEffect1'><br></br>
+<input type="hidden" name="signupForm" class='inputHoverEffect1'>
+<div class='button1' >Sign up</div>
+>>>>>>> 1b01caff634f7707ddf455b7161c29fc19f00803
 
 </form></div>
 
 </div>
-<div class='col-md-4'></div>
+<div class='col-md-3'></div>
 </div>
 
+<<<<<<< HEAD
 <script>
 function ValidateSignUpForm() {
     const form = document.querySelector('#signUpForm');
@@ -84,5 +125,7 @@ function ToastAlert(toastClass, message, duration) {
     }, duration);
 }
 </script>
+=======
+>>>>>>> 1b01caff634f7707ddf455b7161c29fc19f00803
 
 <?php include 'footer.php'; ?>

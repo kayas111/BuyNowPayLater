@@ -1,8 +1,10 @@
 
 <?php include './header.php'; ?>
 <div class='row'>
-<div class='col-md-4'></div>
-<div style='padding-top:50px;' class='col-md-4'>
+<div class='col-md-3'>
+
+</div>
+<div style='padding-top:50px;' class='col-md-6'>
 <div class='formContainer' ><form id="confirmRequestForm" action="">
 <div class='formLabel'>Check and confirm request</div>
 <div class='formInputLabel'>Enter request ID</div>
@@ -13,7 +15,11 @@
 
 
 </div>
-<div class='col-md-4'></div>
+<div class='col-md-3'></div>
+
+
+
+
 </div>
 
 <script>

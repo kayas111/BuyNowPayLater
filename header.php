@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
   
    
 </head>
-<body>
+<body style="font-size:14px;">
     <div class='row navBar'>
         
    
