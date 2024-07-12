@@ -25,8 +25,8 @@ include './header.php';
 
 
 <?php
-unset($_SESSION['alert_type']);
-unset($_SESSION['alert_msg']);
+unset($_SESSION['alert']);
+
 }
 ?>
 
