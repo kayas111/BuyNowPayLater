@@ -12,17 +12,15 @@ include './header.php';
    
 
 <?php
-    if(isset($_SESSION['alert_type'])){
+    if(isset($_SESSION['alert'])){
 
      
 ?>
 
-<script>
-console.log('lisa')
-</script>
-  <div class="alert alert-<?= $_SESSION['alert_type']?>">
 
-  <?= $_SESSION['alert_msg']?>
+  <div class="alert alert-<?= $_SESSION['alert']['alert_type']?>">
+
+  <?= $_SESSION['alert']['alert_msg']?>
   </div>
 
 
@@ -46,7 +44,7 @@ unset($_SESSION['alert_msg']);
 <div class='formInputLabel'>Confirm password</div>
 <input type="text" name="password2" class='inputHoverEffect1'><br></br>
 <input type="hidden" name="signupForm" class='inputHoverEffect1'>
-<div class='button1' >Sign up</div>
+<div class='button1'>Sign up</div>
 
 </form></div>
 
@@ -54,6 +52,5 @@ unset($_SESSION['alert_msg']);
 </div>
 <div class='col-md-3'></div>
 </div>
-
 
 <?php include 'footer.php'; ?>
