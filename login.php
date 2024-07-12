@@ -1,8 +1,8 @@
 
 <?php include './header.php'; ?>
 <div class='row'>
-<div class='col-md-4'></div>
-<div style='padding-top:50px;' class='col-md-4'>
+<div class='col-md-3'></div>
+<div style='padding-top:50px;' class='col-md-6'>
 <div class='formContainer' ><form id="loginForm" action="">
 <div class='formLabel'>Log in</div>
 <div class='formInputLabel'>Email</div>
@@ -10,13 +10,13 @@
 <div class='formInputLabel'>Password</div>
 <input type="text" name="password" class='inputHoverEffect1'><br></br>
 
-<div class='button1' onclick='Login()' >Log in.</div>
+<div class='button1' onclick='Login()' >Log in</div>
 
 </form></div>
 
 
 </div>
-<div class='col-md-4'></div>
+<div class='col-md-3'></div>
 </div>
 
 <script>
