@@ -1,6 +1,6 @@
 
 <?php include './header.php'; ?>
-<div class='row'>
+<div class='bgImg row'>
 <div class='col-md-3'></div>
 <div style='padding-top:50px;' class='col-md-6'>
 <div class='formContainer' ><form id="loginForm" action="">

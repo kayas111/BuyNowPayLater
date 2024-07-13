@@ -4,32 +4,23 @@ include './header.php';
   ?>
 
 
-<div class='row'>
+<?php
+if(isset($_SESSION['alert'])){
+    $alert=$_SESSION['alert'];
+ ?>
+<script>ToastAlert(<?= $alert['class']?>,<?= $alert['msg']?>, 2000)</script>
+
+<?php
+unset($_SESSION['alert']);
+}
+?>
+
+
+<div class='bgImg row'>
 <div class='col-md-3'></div>
 <div style='padding-top:50px;' class='col-md-6'>
 
 <div class='formContainer' >
-
-
-<?php
-    if(isset($_SESSION['alert'])){
-
-?>
-
-
-  <div class="alert alert-<?= $_SESSION['alert']['alert_type']?>">
-
-  <?= $_SESSION['alert']['alert_msg']?>
-  </div>
-
-
-
-<?php
-unset($_SESSION['alert']);
-
-}
-?>
-
 <form id="signupForm" method = "POST" action="./components/handleFormRequests.php">
 <div class='formLabel'>Sign up</div>
 <div class='formInputLabel'>Name</div>
