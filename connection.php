@@ -10,7 +10,7 @@ die ("connection failed: ".$conn->connect_error);
 
 }else{
 
-echo ("Successfully connected to database.");
+//echo ("Successfully connected to database.");
 
 
 
@@ -30,10 +30,5 @@ echo ("Successfully connected to database.");
 //echo(json_encode(mysqli_fetch_assoc($result)));
 
 
-
-
-
-
-mysqli_close($conn);
 
 ?>
