@@ -1,4 +1,5 @@
 <?php include './header.php'; ?>
+<<<<<<< HEAD
 <div class='row'>
 <div class='col-md-3'></div>
 <div style='padding-top:50px;' class='col-md-6'>
@@ -10,6 +11,23 @@
         <div class='button1' onclick='AcknowledgeRequest()'>Acknowledge request</div>
     </form>
 </div>
+=======
+<div class='bgImg row'>
+<div  class='col-md-3'>
+
+</div>
+
+<div style='padding-top:50px;' class='col-md-6'>
+<div class='formContainer' ><form id="confirmRequestForm" action="">
+<div class='formLabel'>Check and confirm request.</div>
+<div class='formInputLabel'>Enter request ID</div>
+<input type="text" name="requestId" class='inputHoverEffect1'><br></br>
+<div class='button1' onclick='AcknowledgeRequet()' >Acknowledge request</div>
+
+</form></div>
+
+
+>>>>>>> 8531227b04e4e8c34fdb005e6f94a429f0b7d324
 </div>
 <div class='col-md-3'></div>
 </div>

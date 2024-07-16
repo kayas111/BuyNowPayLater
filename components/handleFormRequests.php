@@ -6,7 +6,7 @@ $formData=$_POST;
 
 if(isset($formData["signupForm"])){
 echo "here";
-    $_SESSION['alert']=array('alert_type'=>'success','alert_msg'=>'Succesfully signed up');
+    $_SESSION['alert']=array('class'=>'toastAlert1','msg'=>'Successfully signed up');
     header('location:../signup.php');
 
 }
