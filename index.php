@@ -12,7 +12,7 @@
 </div>
 
 <div style="padding:20px;" class='col-md-12'>
-<div style='font-weight:bold; color:orange;font-size: 25px;padding-top:50px;' >Follow these steps below:</div>
+<div style='font-weight:bold; color:orange;font-size: 25px;padding-top:50px;' >Follow these steps:</div>
 Sign up, Log in, Make your request, Visit the service point, Get served.
     
 <div style="padding-top:40px;"><button class='btn btn-success' >Get Started</button></div>
