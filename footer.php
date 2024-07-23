@@ -1,4 +1,7 @@
-
+<body>
+    <div class="content">
+        <!-- Your page content here -->
+    </div>
 <div  class='footer'>
     
 <div class='row'>
