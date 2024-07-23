@@ -3,8 +3,8 @@
 
 <?php
 
-$result=mysqli_query($conn,'select * from business;');
-if (mysqli_num_rows($result)<1){
+$table=mysqli_query($conn,'select * from business;');
+if (mysqli_num_rows($table)<1){
 
 
 
@@ -15,17 +15,28 @@ if (mysqli_num_rows($result)<1){
 <div>No services</div>
 
 <?php
-} else{
-    
-    $row=mysqli_fetch_assoc($result);
+} else{?>
+<div class='row'>
 
-echo json_encode($row);
-?>
+    
+
+<?php foreach($table as $row){?>
+
+<div class='col-md-4'>
+
 <div><?=$row['businessName']?></div>
 <div><?=$row['serviceDescription']?></div>
 <div><?=$row['bill']?></div>
 <div><?=$row['location']?></div>
 
+
+</div>
+<?php
+}
+
+?>
+    
+</div>
 <?php
 }
 ?>
