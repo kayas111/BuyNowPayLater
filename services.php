@@ -30,6 +30,7 @@ if (mysqli_num_rows($table)<1){
 <div><?=$row['location']?></div>
 
 
+
 </div>
 <?php
 }

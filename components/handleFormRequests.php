@@ -66,6 +66,29 @@ if(isset($formData["login"])){
         header('location:../login.php');
     }
 
+} if(isset($formData["fetchRequest"])){
+    $requestId=$formData['requestId'];
+    
+
+    $result=mysqli_query($conn,"select * from requests where requestId='$requestId'");   
+    if(mysqli_num_rows($result)>0){
+        $_SESSION['request']=array('description'=>'posh rice and meat');
+         
+        header('location:../confirmrequest.php');
+       
+
+
+        
+    }else{
+
+        $_SESSION['alert']=array('class'=>'toastAlert2','msg'=>'Request does not exist','delay'=>3000);
+   
+       
+        header('location:../confirmrequest.php');
+    }
+
+
+
 }
 
 

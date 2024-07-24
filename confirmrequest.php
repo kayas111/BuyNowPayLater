@@ -1,15 +1,45 @@
 <?php include './header.php'; ?>
+
+
+
+
 <div class='bgImg row'>
 <div  class='col-md-3'>
 
 </div>
 
 <div style='padding-top:50px;' class='col-md-6'>
-<div class='formContainer' ><form id="confirmRequestForm" action="">
+<div class='formContainer' ><form id="confirmRequestForm" method="POST" action="./components/handleFormRequests.php">
 <div class='formLabel'>Check and confirm request</div>
-<div class='formInputLabel'>Enter request ID</div>
-<input type="text" name="requestId" class='inputHoverEffect1'><br></br>
+<div class='formInputLabel' >Enter request ID</div>
+<input type="hidden" name="fetchRequest" class='inputHoverEffect1'>
+<input type="text" name="requestId" class='inputHoverEffect1'>
+<div style='padding-top:3px;'><div class='button1' onclick='fetchRequest()'>View request</div></div>
+
+<div>
+
+
+<?php
+if(isset($_SESSION['request'])){
+  
+ ?>
+<div><?= $_SESSION['request']['description']?><div>
+
+<?php
+unset($_SESSION['request']);
+} else{?>
+
+<script>ToastAlert('toastAlert2','No request',3000)</script>
+
+<?php
+}
+?>
+
+</div>
+
+<br></br>
 <div class='button1' onclick='AcknowledgeRequet()' >Acknowledge request</div>
+
 
 </form></div>
 
@@ -18,10 +48,15 @@
 <div class='col-md-3'></div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
-function ToastAlert(className, message, duration)
-    alert(message);
+ function fetchRequest(){
+    
+    let form=document.querySelector("#confirmRequestForm")
+    
+    form.submit();
+
+ }
 
 function AcknowledgeRequest() {
     var requestId = document.querySelector('#confirmRequestForm').requestId.value.trim();
@@ -48,4 +83,4 @@ function AcknowledgeRequest() {
 }
 </script>
 
-<?php include 'footer.php'; ?>
+<?php include './footer.php'; ?>
