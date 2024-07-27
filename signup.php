@@ -23,7 +23,7 @@ unset($_SESSION['alert']);
 
 <div class='formContainer' >
 <form id="signupForm" method = "POST" action="./components/handleFormRequests.php">
-<div class='formLabel'>Sign up.</div>
+<div class='formLabel'>Sign up</div>
 <div class='formInputLabel'>Name</div>
 <input type="text" name="name" class='inputHoverEffect1'><br></br>
 <div class='formInputLabel'>Contact</div>
