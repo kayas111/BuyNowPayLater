@@ -21,20 +21,33 @@
         <?php foreach($table as $row) { ?>
         <div class="col-12 col-md-3">
             <div class="business-card">
+                
                 <div class="business-info">
-                    <h2 class="business-name"><?=$row['businessName']?></h2>
-                    <p class="business-description"><?=$row['serviceDescription']?></p>
-                    <p class="business-bill">Bill: <?=$row['bill']?></p>
+                    <h2 id="businessname" class="business-name"><?=$row['businessName']?></h2>
+                
+                    <p  class="business-description"> <span ><?=$row['serviceDescription']?></span>  </p>
+                    <p class="business-bill">Bill: <span id="businessbill"><?=$row['bill']?></span> 
                     <p class="business-location">Location: <?=$row['location']?></p>
-                    <button class="request-button">Send request</button>
-                </div>
+                    
+                    <a href="?bill=<?=$row['bill']?>&serviceDescription=<?=$row['serviceDescription']?>&businessId=<?=$row['businessId']?>&clientId=<?=$_SESSION['user']['clientId']?>">  <button class="request-button">Send request</button></a>
+                 </div>
+
             </div>
         </div>
+
+
         <?php } ?>
     </div>
     <?php } ?>
 
+   <script>
+function submitrequest(value) {
+    console.log( value);
+   
 
+}
+
+</script>
 </body>
 </html>
 
