@@ -48,10 +48,13 @@ if(isset($formData["login"])){
     $result=mysqli_query($conn,"select email from client where email='$email'");   
     if(mysqli_num_rows($result)>0){
 
-        $result=mysqli_query($conn,"select email,password from client where email='$email' and password='$password'"); 
+        $result=mysqli_query($conn,"select clientName,email,password,clientId from client where email='$email' and password='$password'"); 
         if(mysqli_num_rows($result)>0){
-        $_SESSION['alert']=array('class'=>'toastAlert1','msg'=>'logged in successfully','delay'=>3000);
-        header('location:../login.php');
+         $user=mysqli_fetch_assoc($result);
+        
+      $_SESSION['user']=array('clientName'=>$user['clientName'],'clientId'=>$user['clientId']);
+$_SESSION['alert']=array('class'=>'toastAlert1','msg'=>'logged in successfully','delay'=>3000);
+header('location:../login.php');
         }else{
             $_SESSION['alert']=array('class'=>'toastAlert2','msg'=>'Wrong password','delay'=>3000);
             header('location:../login.php');
