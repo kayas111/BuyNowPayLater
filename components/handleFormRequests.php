@@ -53,6 +53,7 @@ if(isset($formData["login"])){
          $user=mysqli_fetch_assoc($result);
         
       $_SESSION['user']=array('clientName'=>$user['clientName'],'clientId'=>$user['clientId']);
+      
 $_SESSION['alert']=array('class'=>'toastAlert1','msg'=>'logged in successfully','delay'=>3000);
 header('location:../login.php');
         }else{
