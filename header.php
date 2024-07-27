@@ -50,7 +50,7 @@ session_start();
 <?php
 if(isset($_SESSION['user'])){
   
-  echo json_encode( $_SESSION['user']);
+  echo 'logged in';
   ?>
 
 <div>
@@ -61,7 +61,7 @@ if(isset($_SESSION['user'])){
 
 <?php
 } else{
-
+  echo 'logged out';
 
 }
 

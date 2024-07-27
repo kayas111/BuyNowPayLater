@@ -12,6 +12,34 @@
 <body>
 
     <?php
+
+if(isset($_GET['serviceDescription'])&&isset($_GET['bill'])&&isset($_GET['clientId'])&&isset($_GET['businessId'])){
+// Write a command to insert the details of the request to the database;
+
+$serviceDescription=$_GET['serviceDescription'];
+$bill=$_GET['bill'];
+$clientId=$_GET['clientId'];
+$buinessId=$_GET['businessId'];
+$status='pending';
+
+
+
+
+
+
+}else{
+    ;
+}
+
+
+if(isset($_SESSION['user'])){
+;
+}else{
+    $_SESSION['alert']=array('class'=>'toastAlert2','msg'=>'log in to see the services','delay'=>4000);
+    header('location:./login.php');
+}
+
+
     $table = mysqli_query($conn, 'select * from business;');
     if (mysqli_num_rows($table) < 1) {
         echo "<div>No services</div>";
