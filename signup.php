@@ -6,9 +6,10 @@ include './header.php';
 
 <?php
 if(isset($_SESSION['alert'])){
+   
     $alert=$_SESSION['alert'];
  ?>
-<script>ToastAlert(<?= $alert['class']?>,<?= $alert['msg']?>, 2000)</script>
+<script>ToastAlert('<?= $alert['class']?>','<?= $alert['msg']?>', <?= $alert['delay'] ?>)</script>
 
 <?php
 unset($_SESSION['alert']);
@@ -29,6 +30,8 @@ unset($_SESSION['alert']);
 <input type="text" name="contact"class='inputHoverEffect1'><br></br>
 <div class='formInputLabel'>Email</div>
 <input type="text" name="email" class='inputHoverEffect1'><br></br>
+<div class='formInputLabel'>Occupation</div>
+<input type="text" name="occupation" class='inputHoverEffect1'><br></br>
 <div class='formInputLabel'>Password</div>
 <input type="text" name="password" class='inputHoverEffect1'><br></br>
 <div class='formInputLabel'>Confirm password</div>
@@ -48,6 +51,7 @@ function ValidateSignUpForm() {
     const name = form.name.value.trim();
     const contact = form.contact.value.trim();
     const email = form.email.value.trim();
+    const occupation = form.occupation.value.trim();
     const password = form.password.value.trim();
     const password2 = form.password2.value.trim();
 
@@ -68,16 +72,9 @@ function ValidateSignUpForm() {
         ToastAlert("toastAlert2", "Email is required", 2000);
         return false;
     }
-    if (password === '') {
-        ToastAlert("toastAlert2", "Password is required", 2000);
-        return false;
-    }
-    if (password.length < 8) {
-        ToastAlert("toastAlert2", "Password must be at least 8 characters long", 2000);
-        return false;
-    }
-    if (!/\d/.test(password) || !/[!@#$%^&*]/.test(password)) {
-        ToastAlert("toastAlert2", "Password must contain at least one number and one symbol", 2000);
+   
+    if (password.length < 4) {
+        ToastAlert("toastAlert2", "Password must be at least 4 characters long", 2000);
         return false;
     }
     if (password2 === '') {
@@ -89,7 +86,7 @@ function ValidateSignUpForm() {
         return false;
     }
 
-    ToastAlert("toastAlert1", "Successful", 2000);
+    
         form.submit();
 }
 
