@@ -50,15 +50,17 @@ if (isset($formData["fetchRequest"])) {
     $requestId = $formData['requestId'];
     $result = mysqli_query($conn, "SELECT * FROM requests WHERE requestId='$requestId'");
     if (mysqli_num_rows($result) > 0) {
-        $_SESSION['request'] = array('description' => 'Request description here');  // Set appropriate description
-        $_SESSION['request_viewed'] = true;  // Set session variable indicating the request has been viewed
+       // Set appropriate description
+        $_SESSION['request'] = array('description');  
+       // Set session variable indicating the request has been viewed 
+        $_SESSION['request_viewed'] = true;  
         header('location:../confirmrequest.php');
     } else {
         $_SESSION['alert'] = array('class' => 'toastAlert2', 'msg' => 'Request does not exist', 'delay' => 3000);
         header('location:../confirmrequest.php');
     }
 }
-
+//View the request before acknowledging
 if (isset($formData["acknowledgeRequest"])) {
     if (!isset($_SESSION['request_viewed']) || $_SESSION['request_viewed'] !== true) {
         echo json_encode(["error" => "View the request before acknowledging"]);

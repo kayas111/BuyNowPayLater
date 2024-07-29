@@ -8,7 +8,7 @@
             <form id="confirmRequestForm" method="POST" action="./components/handleFormRequests.php">
                 <div class='formLabel'>Check and confirm request</div>
                 <div class='formInputLabel'>Enter request ID</div>
-                <input type="hidden" name="fetchRequest" class='inputHoverEffect1' value="true"> <!-- Adjust the value as needed -->
+                <input type="hidden" name="fetchRequest" class='inputHoverEffect1' value="true"> //<!-- Adjust the value as needed -->
                 <input type="text" name="requestId" class='inputHoverEffect1'>
                 <input type="hidden" id="requestViewed" name="requestViewed" value="false">
                 <div style='padding-top:3px;'>
@@ -73,14 +73,14 @@ function AcknowledgeRequest() {
     }
 }
 
-// Function to enable acknowledge button if the request has been viewed
+//Function to enable acknowledge button if the request has been viewed
 function enableAcknowledgeButton() {
     var requestViewed = document.querySelector('#confirmRequestForm').requestViewed.value;
     var acknowledgeButton = document.getElementById('acknowledgeButton');
 
 }
 
-// Call the function initially to set the button state based on session data
+//Call the function initially to set the button state based on session data
 enableAcknowledgeButton();
 </script>
 
