@@ -42,6 +42,10 @@ session_start();
     <li class="nav-item">
 <a class="nav-value"  href="./confirmrequest.php"><span class="hovereffect">Confirm requests </span></a>
     </li>
+    <li class="nav-item">
+<a class="nav-value"  href="./services.php"><span class="hovereffect">Services </span></a>
+    </li>
+  
   
   
 
